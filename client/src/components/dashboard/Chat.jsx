@@ -94,8 +94,8 @@ const Chat = () => {
   const [show, setShow] = useState(false);
 
   return (
-    <div className="bg-white p-3 rounded-md">
-      <div className="w-full flex relative">
+    <div className="p-3 bg-white rounded-md">
+      <div className="relative flex w-full">
         <div
           className={`w-[230px] md-lg:absolute bg-white transition-all md-lg:h-full ${
             show ? "left-0" : "-left-[350px]"
@@ -118,7 +118,10 @@ const Chat = () => {
                   {activeSeller.some((c) => c.sellerId === f.fdId) && (
                     <div className="w-[10px] h-[10px] rounded-full bg-green-500 absolute right-0 bottom-0"></div>
                   )}
-                  <img src="http://localhost:3000/images/user.png" alt="" />
+                  <img
+                    src="https://multivendor-shop-client.vercel.app/images/user.png"
+                    alt=""
+                  />
                 </div>
                 <span>{f.name}</span>
               </Link>
@@ -136,7 +139,10 @@ const Chat = () => {
                     ) && (
                       <div className="w-[10px] h-[10px] rounded-full bg-green-500 absolute right-0 bottom-0"></div>
                     )}
-                    <img src="http://localhost:3000/images/user.png" alt="" />
+                    <img
+                      src="https://multivendor-shop-client.vercel.app/images/user.png"
+                      alt=""
+                    />
                   </div>
                   <span>{currentFd.name}</span>
                 </div>
@@ -148,7 +154,7 @@ const Chat = () => {
                 </div>
               </div>
               <div className="h-[400px] w-full bg-slate-100 p-3 rounded-md">
-                <div className="w-full h-full overflow-y-auto flex flex-col gap-3">
+                <div className="flex flex-col w-full h-full gap-3 overflow-y-auto">
                   {fd_messages.map((m, i) => {
                     if (currentFd?.fdId !== m.receverId) {
                       return (
@@ -159,10 +165,10 @@ const Chat = () => {
                         >
                           <img
                             className="w-[30px] h-[30px] "
-                            src="http://localhost:3000/images/user.png"
+                            src="https://multivendor-shop-client.vercel.app/images/user.png"
                             alt=""
                           />
-                          <div className="p-2 bg-purple-500 text-white rounded-md">
+                          <div className="p-2 text-white bg-purple-500 rounded-md">
                             <span>{m.message}</span>
                           </div>
                         </div>
@@ -176,10 +182,10 @@ const Chat = () => {
                         >
                           <img
                             className="w-[30px] h-[30px] "
-                            src="http://localhost:3000/images/user.png"
+                            src="https://multivendor-shop-client.vercel.app/images/user.png"
                             alt=""
                           />
-                          <div className="p-2 bg-cyan-500 text-white rounded-md">
+                          <div className="p-2 text-white rounded-md bg-cyan-500">
                             <span>{m.message}</span>
                           </div>
                         </div>
@@ -188,7 +194,7 @@ const Chat = () => {
                   })}
                 </div>
               </div>
-              <div className="flex p-2 justify-between items-center w-full">
+              <div className="flex items-center justify-between w-full p-2">
                 <div className="w-[40px] h-[40px] border p-2 justify-center items-center flex rounded-full">
                   <label className="cursor-pointer" htmlFor="">
                     <AiOutlinePlus />
@@ -201,9 +207,9 @@ const Chat = () => {
                     onChange={(e) => setText(e.target.value)}
                     type="text"
                     placeholder="input message"
-                    className="w-full rounded-full h-full outline-none p-3"
+                    className="w-full h-full p-3 rounded-full outline-none"
                   />
-                  <div className="text-2xl right-2 top-2 absolute cursor-auto">
+                  <div className="absolute text-2xl cursor-auto right-2 top-2">
                     <span>
                       <GrEmoji />
                     </span>
