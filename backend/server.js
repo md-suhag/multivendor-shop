@@ -16,6 +16,7 @@ app.use(
       "http://localhost:3000",
       "http://localhost:3001",
       "https://multivendor-shop-client.vercel.app",
+      "https://multivendor-shop-dashboard.vercel.app",
     ],
     credentials: true,
   })
