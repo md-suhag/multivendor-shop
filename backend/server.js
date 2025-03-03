@@ -15,7 +15,7 @@ app.use(
     origin: [
       "http://localhost:3000",
       "http://localhost:3001",
-      "https://multivendor-shop-backend-rl68.onrender.com",
+      "https://multivendor-shop-client.vercel.app",
     ],
     credentials: true,
   })
