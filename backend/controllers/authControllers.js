@@ -19,6 +19,9 @@ class authControllers {
             role: admin.role,
           });
           res.cookie("accessToken", token, {
+            httpOnly: true,
+            secure: true,
+            sameSite: "None",
             expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
           });
           responseReturn(res, 200, { token, message: "Login success" });
@@ -47,6 +50,7 @@ class authControllers {
           res.cookie("accessToken", token, {
             httpOnly: true,
             secure: true,
+            sameSite: "None",
             expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
           });
           responseReturn(res, 200, { token, message: "Login success" });
